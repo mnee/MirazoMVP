@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		531B654F1FF6B92D00DB9334 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531B654E1FF6B92D00DB9334 /* AppDelegate.swift */; };
-		531B65511FF6B92D00DB9334 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531B65501FF6B92D00DB9334 /* ViewController.swift */; };
 		531B65541FF6B92D00DB9334 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 531B65521FF6B92D00DB9334 /* Main.storyboard */; };
 		531B65571FF6B92D00DB9334 /* MirazoMVP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 531B65551FF6B92D00DB9334 /* MirazoMVP.xcdatamodeld */; };
 		531B65591FF6B92D00DB9334 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 531B65581FF6B92D00DB9334 /* Assets.xcassets */; };
 		531B655C1FF6B92D00DB9334 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 531B655A1FF6B92D00DB9334 /* LaunchScreen.storyboard */; };
+		531B65641FFAE99D00DB9334 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531B65631FFAE99D00DB9334 /* HomeViewController.swift */; };
+		531B65661FFAF19300DB9334 /* HomeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531B65651FFAF19300DB9334 /* HomeCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		531B654B1FF6B92D00DB9334 /* MirazoMVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MirazoMVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		531B654E1FF6B92D00DB9334 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		531B65501FF6B92D00DB9334 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		531B65531FF6B92D00DB9334 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		531B65561FF6B92D00DB9334 /* MirazoMVP.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MirazoMVP.xcdatamodel; sourceTree = "<group>"; };
 		531B65581FF6B92D00DB9334 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		531B655B1FF6B92D00DB9334 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		531B655D1FF6B92D00DB9334 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		531B65631FFAE99D00DB9334 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		531B65651FFAF19300DB9334 /* HomeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +58,11 @@
 		531B654D1FF6B92D00DB9334 /* MirazoMVP */ = {
 			isa = PBXGroup;
 			children = (
-				531B654E1FF6B92D00DB9334 /* AppDelegate.swift */,
-				531B65501FF6B92D00DB9334 /* ViewController.swift */,
+				531B65631FFAE99D00DB9334 /* HomeViewController.swift */,
+				531B65651FFAF19300DB9334 /* HomeCardView.swift */,
 				531B65521FF6B92D00DB9334 /* Main.storyboard */,
 				531B65581FF6B92D00DB9334 /* Assets.xcassets */,
+				531B654E1FF6B92D00DB9334 /* AppDelegate.swift */,
 				531B655A1FF6B92D00DB9334 /* LaunchScreen.storyboard */,
 				531B655D1FF6B92D00DB9334 /* Info.plist */,
 				531B65551FF6B92D00DB9334 /* MirazoMVP.xcdatamodeld */,
@@ -139,9 +142,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				531B65511FF6B92D00DB9334 /* ViewController.swift in Sources */,
 				531B65571FF6B92D00DB9334 /* MirazoMVP.xcdatamodeld in Sources */,
 				531B654F1FF6B92D00DB9334 /* AppDelegate.swift in Sources */,
+				531B65641FFAE99D00DB9334 /* HomeViewController.swift in Sources */,
+				531B65661FFAF19300DB9334 /* HomeCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
