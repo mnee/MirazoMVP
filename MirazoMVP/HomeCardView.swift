@@ -20,6 +20,7 @@ class HomeCardView: UIView {
         self.image = image
         
         super.init(frame: CGRect.zero)
+        self.isOpaque = false
         self.frame = frame
         
         setNeedsDisplay() // Potentially not necessary
@@ -30,8 +31,6 @@ class HomeCardView: UIView {
     }
    
     override func draw(_ rect: CGRect) {
-        self.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
-        
         // Base rounded card
         let roundedRect = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height), cornerRadius: cornerRadius)
         // roundedRect.addClip()
@@ -39,11 +38,15 @@ class HomeCardView: UIView {
         roundedRect.fill()
         
         // Teaser text
-        let teaserLabel = UILabel(frame: CGRect(x: margin, y: margin, width: bounds.width - margin*2, height: margin*4))
+        // TODO: Set font programatically
+        let teaserLabel = UILabel(frame: CGRect(x: margin, y: margin, width: bounds.width - margin*2, height: margin*2))
         teaserLabel.text = text
         teaserLabel.textColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
         self.addSubview(teaserLabel)
         
+        let underline = UIBezierPath(rect: CGRect(x: 0, y: margin*3, width: bounds.width, height: margin/4))
+        color.setFill()
+        underline.fill()
     }
 }
 
