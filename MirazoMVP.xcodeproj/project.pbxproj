@@ -14,6 +14,13 @@
 		531B655C1FF6B92D00DB9334 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 531B655A1FF6B92D00DB9334 /* LaunchScreen.storyboard */; };
 		531B65641FFAE99D00DB9334 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531B65631FFAE99D00DB9334 /* HomeViewController.swift */; };
 		531B65661FFAF19300DB9334 /* HomeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531B65651FFAF19300DB9334 /* HomeCardView.swift */; };
+		531B6568200316BF00DB9334 /* MedicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531B6567200316BF00DB9334 /* MedicationViewController.swift */; };
+		531B656A200316D700DB9334 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531B6569200316D700DB9334 /* GraphViewController.swift */; };
+		531B656C2003175C00DB9334 /* ChatbotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531B656B2003175C00DB9334 /* ChatbotViewController.swift */; };
+		531B656E2003177100DB9334 /* PhysicianContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531B656D2003177100DB9334 /* PhysicianContactViewController.swift */; };
+		531B6573200319F700DB9334 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 531B6572200319F700DB9334 /* Default-568h@2x.png */; };
+		531B657520031F5800DB9334 /* MedCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531B657420031F5800DB9334 /* MedCardView.swift */; };
+		531B657820034D4C00DB9334 /* MedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531B657720034D4C00DB9334 /* MedData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +33,13 @@
 		531B655D1FF6B92D00DB9334 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		531B65631FFAE99D00DB9334 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		531B65651FFAF19300DB9334 /* HomeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCardView.swift; sourceTree = "<group>"; };
+		531B6567200316BF00DB9334 /* MedicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationViewController.swift; sourceTree = "<group>"; };
+		531B6569200316D700DB9334 /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
+		531B656B2003175C00DB9334 /* ChatbotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatbotViewController.swift; sourceTree = "<group>"; };
+		531B656D2003177100DB9334 /* PhysicianContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicianContactViewController.swift; sourceTree = "<group>"; };
+		531B6572200319F700DB9334 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		531B657420031F5800DB9334 /* MedCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedCardView.swift; sourceTree = "<group>"; };
+		531B657720034D4C00DB9334 /* MedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +56,7 @@
 		531B65421FF6B92D00DB9334 = {
 			isa = PBXGroup;
 			children = (
+				531B6572200319F700DB9334 /* Default-568h@2x.png */,
 				531B654D1FF6B92D00DB9334 /* MirazoMVP */,
 				531B654C1FF6B92D00DB9334 /* Products */,
 			);
@@ -58,16 +73,54 @@
 		531B654D1FF6B92D00DB9334 /* MirazoMVP */ = {
 			isa = PBXGroup;
 			children = (
-				531B65631FFAE99D00DB9334 /* HomeViewController.swift */,
-				531B65651FFAF19300DB9334 /* HomeCardView.swift */,
+				531B6571200317AA00DB9334 /* Main Screens */,
 				531B65521FF6B92D00DB9334 /* Main.storyboard */,
+				531B656F2003177F00DB9334 /* Supporting Files */,
+				531B65551FF6B92D00DB9334 /* MirazoMVP.xcdatamodeld */,
+				531B655D1FF6B92D00DB9334 /* Info.plist */,
+			);
+			path = MirazoMVP;
+			sourceTree = "<group>";
+		};
+		531B656F2003177F00DB9334 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				531B65581FF6B92D00DB9334 /* Assets.xcassets */,
 				531B654E1FF6B92D00DB9334 /* AppDelegate.swift */,
 				531B655A1FF6B92D00DB9334 /* LaunchScreen.storyboard */,
-				531B655D1FF6B92D00DB9334 /* Info.plist */,
-				531B65551FF6B92D00DB9334 /* MirazoMVP.xcdatamodeld */,
 			);
-			path = MirazoMVP;
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		531B65702003179F00DB9334 /* Home Screen */ = {
+			isa = PBXGroup;
+			children = (
+				531B65631FFAE99D00DB9334 /* HomeViewController.swift */,
+				531B65651FFAF19300DB9334 /* HomeCardView.swift */,
+			);
+			path = "Home Screen";
+			sourceTree = "<group>";
+		};
+		531B6571200317AA00DB9334 /* Main Screens */ = {
+			isa = PBXGroup;
+			children = (
+				531B65702003179F00DB9334 /* Home Screen */,
+				531B657620031F5E00DB9334 /* Meds Screen */,
+				531B6569200316D700DB9334 /* GraphViewController.swift */,
+				531B656B2003175C00DB9334 /* ChatbotViewController.swift */,
+				531B656D2003177100DB9334 /* PhysicianContactViewController.swift */,
+			);
+			path = "Main Screens";
+			sourceTree = "<group>";
+		};
+		531B657620031F5E00DB9334 /* Meds Screen */ = {
+			isa = PBXGroup;
+			children = (
+				531B6567200316BF00DB9334 /* MedicationViewController.swift */,
+				531B657420031F5800DB9334 /* MedCardView.swift */,
+				531B657720034D4C00DB9334 /* MedData.swift */,
+			);
+			path = "Meds Screen";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				531B655C1FF6B92D00DB9334 /* LaunchScreen.storyboard in Resources */,
+				531B6573200319F700DB9334 /* Default-568h@2x.png in Resources */,
 				531B65591FF6B92D00DB9334 /* Assets.xcassets in Resources */,
 				531B65541FF6B92D00DB9334 /* Main.storyboard in Resources */,
 			);
@@ -142,8 +196,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				531B657820034D4C00DB9334 /* MedData.swift in Sources */,
 				531B65571FF6B92D00DB9334 /* MirazoMVP.xcdatamodeld in Sources */,
 				531B654F1FF6B92D00DB9334 /* AppDelegate.swift in Sources */,
+				531B656E2003177100DB9334 /* PhysicianContactViewController.swift in Sources */,
+				531B6568200316BF00DB9334 /* MedicationViewController.swift in Sources */,
+				531B656C2003175C00DB9334 /* ChatbotViewController.swift in Sources */,
+				531B656A200316D700DB9334 /* GraphViewController.swift in Sources */,
+				531B657520031F5800DB9334 /* MedCardView.swift in Sources */,
 				531B65641FFAE99D00DB9334 /* HomeViewController.swift in Sources */,
 				531B65661FFAF19300DB9334 /* HomeCardView.swift in Sources */,
 			);
