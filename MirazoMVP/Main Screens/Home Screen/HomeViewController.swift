@@ -23,7 +23,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if let navBar = self.navigationController?.navigationBar {
-            navBar.barTintColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
+            navBar.removeBorder(with: #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1))
             // TODO: Set name from core data
             self.navigationItem.title = "Welcome back Mischa!"
             // TODO: Make title bolder, left align?
@@ -60,5 +60,14 @@ class HomeViewController: UIViewController {
             print(cardView.tabIndex)
             tabVC.selectedIndex = cardView.tabIndex
         }
+    }
+}
+
+extension UINavigationBar {
+    func removeBorder(with color: UIColor) {
+        self.barTintColor = color
+        self.isTranslucent = false
+        self.setBackgroundImage(UIImage(), for: .default)
+        self.shadowImage = UIImage()
     }
 }

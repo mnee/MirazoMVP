@@ -34,11 +34,167 @@
                     <navigationItem key="navigationItem" title="Medications" id="WPH-2I-wQr"/>
                     <connections>
                         <outlet property="scrollView" destination="TEj-Es-E16" id="Zo4-qG-RCV"/>
+                        <segue destination="JpD-EM-B4a" kind="presentation" identifier="addNewMed" id="j8I-Xn-4R4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vhX-9A-4Y7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="537" y="1372"/>
+        </scene>
+        <!--Add Med View Controller-->
+        <scene sceneID="6vm-CE-qww">
+            <objects>
+                <viewController id="JpD-EM-B4a" customClass="AddMedViewController" customModule="MirazoMVP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wNH-VC-3n8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tHb-W7-kDU">
+                                <rect key="frame" x="0.0" y="114.5" width="375" height="552.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DoseCell" id="JWD-j1-gz6" customClass="DoseAmountTableViewCell" customModule="MirazoMVP" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JWD-j1-gz6" id="QDs-vd-Cei">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pills" translatesAutoresizingMaskIntoConstraints="NO" id="99J-gN-q0i">
+                                                    <rect key="frame" x="16" y="8.5" width="25" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="abf-Kw-bAK"/>
+                                                        <constraint firstAttribute="width" constant="25" id="afl-ph-CKX"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVf-LP-7OF">
+                                                    <rect key="frame" x="334" y="12" width="25" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="0" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bbW-PJ-NZk">
+                                                    <rect key="frame" x="65" y="12" width="14.5" height="21"/>
+                                                    <attributedString key="attributedText"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="light"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="sVf-LP-7OF" secondAttribute="trailing" constant="16" id="63p-cX-mVd"/>
+                                                <constraint firstItem="99J-gN-q0i" firstAttribute="leading" secondItem="QDs-vd-Cei" secondAttribute="leading" constant="16" id="93j-Hh-bJd"/>
+                                                <constraint firstItem="bbW-PJ-NZk" firstAttribute="centerY" secondItem="QDs-vd-Cei" secondAttribute="centerY" id="WeM-PI-n9W"/>
+                                                <constraint firstItem="99J-gN-q0i" firstAttribute="centerY" secondItem="QDs-vd-Cei" secondAttribute="centerY" id="psf-fN-8hi"/>
+                                                <constraint firstItem="sVf-LP-7OF" firstAttribute="centerY" secondItem="QDs-vd-Cei" secondAttribute="centerY" id="qKJ-St-N3V"/>
+                                                <constraint firstItem="bbW-PJ-NZk" firstAttribute="leading" secondItem="99J-gN-q0i" secondAttribute="trailing" constant="24" id="ur7-Zn-bBf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="amountTF" destination="bbW-PJ-NZk" id="zi4-TD-2e3"/>
+                                            <outlet property="icon" destination="99J-gN-q0i" id="rPb-4d-301"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BasicNewMedCell" id="1w5-4H-sJS" customClass="BasicNewMedTableViewCell" customModule="MirazoMVP" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1w5-4H-sJS" id="trv-hJ-2FN">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Calendar" translatesAutoresizingMaskIntoConstraints="NO" id="jJR-ik-bin">
+                                                    <rect key="frame" x="16" y="9" width="25" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="srg-0Z-oZB"/>
+                                                        <constraint firstAttribute="width" constant="25" id="ve9-C1-T7x"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDO-vw-gDp">
+                                                    <rect key="frame" x="65" y="11" width="46" height="21"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Label">
+                                                            <attributes>
+                                                                <font key="NSFont" size="18" name="HelveticaNeue-Medium"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="rDO-vw-gDp" firstAttribute="centerY" secondItem="trv-hJ-2FN" secondAttribute="centerY" id="0kD-6W-HR1"/>
+                                                <constraint firstItem="jJR-ik-bin" firstAttribute="leading" secondItem="trv-hJ-2FN" secondAttribute="leading" constant="16" id="5MS-RU-8dg"/>
+                                                <constraint firstItem="jJR-ik-bin" firstAttribute="centerY" secondItem="trv-hJ-2FN" secondAttribute="centerY" id="Rgp-uO-Knr"/>
+                                                <constraint firstItem="rDO-vw-gDp" firstAttribute="leading" secondItem="jJR-ik-bin" secondAttribute="trailing" constant="24" id="WJc-aH-JOC"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="Icon" destination="jJR-ik-bin" id="S75-zI-3Oi"/>
+                                            <outlet property="label" destination="rDO-vw-gDp" id="Ar3-OS-OLb"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5mn-FG-LeX">
+                                <rect key="frame" x="8" y="16" width="30" height="33.5"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="X">
+                                            <attributes>
+                                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="18" name="HelveticaNeue-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="close:" destination="JpD-EM-B4a" eventType="touchUpInside" id="jbK-ph-h85"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WaC-gB-axt">
+                                <rect key="frame" x="317" y="16" width="42" height="33"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Save">
+                                            <attributes>
+                                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="18" name="HelveticaNeue-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="save:" destination="JpD-EM-B4a" eventType="touchUpInside" id="KKz-K6-LPP"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="Enter name of medication" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ds1-OO-ghA">
+                                <rect key="frame" x="16" y="85.5" width="343" height="21"/>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.86274509803921573" blue="0.0078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Q41-FW-f4u" firstAttribute="trailing" secondItem="WaC-gB-axt" secondAttribute="trailing" constant="16" id="4AT-nD-q60"/>
+                            <constraint firstItem="5mn-FG-LeX" firstAttribute="leading" secondItem="Q41-FW-f4u" secondAttribute="leading" constant="8" id="FR9-m1-osQ"/>
+                            <constraint firstItem="WaC-gB-axt" firstAttribute="top" secondItem="wNH-VC-3n8" secondAttribute="top" constant="16" id="IGr-QN-JU8"/>
+                            <constraint firstItem="Ds1-OO-ghA" firstAttribute="top" secondItem="5mn-FG-LeX" secondAttribute="bottom" constant="36" id="VRO-FO-8TW"/>
+                            <constraint firstItem="tHb-W7-kDU" firstAttribute="leading" secondItem="Q41-FW-f4u" secondAttribute="leading" id="a4n-AV-bqc"/>
+                            <constraint firstItem="Ds1-OO-ghA" firstAttribute="leading" secondItem="Q41-FW-f4u" secondAttribute="leading" constant="16" id="b63-LC-P1d"/>
+                            <constraint firstItem="Q41-FW-f4u" firstAttribute="trailing" secondItem="Ds1-OO-ghA" secondAttribute="trailing" constant="16" id="eyx-fL-cHk"/>
+                            <constraint firstItem="tHb-W7-kDU" firstAttribute="bottom" secondItem="Q41-FW-f4u" secondAttribute="bottom" id="lpq-WF-Jop"/>
+                            <constraint firstItem="tHb-W7-kDU" firstAttribute="trailing" secondItem="Q41-FW-f4u" secondAttribute="trailing" id="pEv-oA-1pi"/>
+                            <constraint firstItem="5mn-FG-LeX" firstAttribute="top" secondItem="wNH-VC-3n8" secondAttribute="top" constant="16" id="pky-yy-1MQ"/>
+                            <constraint firstItem="tHb-W7-kDU" firstAttribute="top" secondItem="Ds1-OO-ghA" secondAttribute="bottom" constant="8" id="wjh-7A-7De"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Q41-FW-f4u"/>
+                    </view>
+                    <connections>
+                        <outlet property="medInfoTable" destination="tHb-W7-kDU" id="0P4-J0-QO0"/>
+                        <outlet property="medNameTF" destination="Ds1-OO-ghA" id="okx-Su-ov0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p9c-Xw-vqR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1208.8" y="1370.4647676161919"/>
         </scene>
         <!--Chatbot View Controller-->
         <scene sceneID="5hD-ht-2X6">
@@ -236,4 +392,8 @@
             <point key="canvasLocation" x="-145" y="2740"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Calendar" width="146" height="154"/>
+        <image name="Pills" width="512" height="512"/>
+    </resources>
 </document>

@@ -21,6 +21,10 @@
 		531B6573200319F700DB9334 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 531B6572200319F700DB9334 /* Default-568h@2x.png */; };
 		531B657520031F5800DB9334 /* MedCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531B657420031F5800DB9334 /* MedCardView.swift */; };
 		531B657820034D4C00DB9334 /* MedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531B657720034D4C00DB9334 /* MedData.swift */; };
+		539A99A5204E7112007E7444 /* AddMedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539A99A4204E7112007E7444 /* AddMedViewController.swift */; };
+		539A99A7204E7162007E7444 /* DoseAmountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539A99A6204E7162007E7444 /* DoseAmountTableViewCell.swift */; };
+		539A99A9204E7173007E7444 /* BasicNewMedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539A99A8204E7173007E7444 /* BasicNewMedTableViewCell.swift */; };
+		539A99AC204E7752007E7444 /* DoseAmountTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539A99AB204E7752007E7444 /* DoseAmountTableViewCellDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,10 @@
 		531B6572200319F700DB9334 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		531B657420031F5800DB9334 /* MedCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedCardView.swift; sourceTree = "<group>"; };
 		531B657720034D4C00DB9334 /* MedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedData.swift; sourceTree = "<group>"; };
+		539A99A4204E7112007E7444 /* AddMedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMedViewController.swift; sourceTree = "<group>"; };
+		539A99A6204E7162007E7444 /* DoseAmountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoseAmountTableViewCell.swift; sourceTree = "<group>"; };
+		539A99A8204E7173007E7444 /* BasicNewMedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicNewMedTableViewCell.swift; sourceTree = "<group>"; };
+		539A99AB204E7752007E7444 /* DoseAmountTableViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoseAmountTableViewCellDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,8 +127,20 @@
 				531B6567200316BF00DB9334 /* MedicationViewController.swift */,
 				531B657420031F5800DB9334 /* MedCardView.swift */,
 				531B657720034D4C00DB9334 /* MedData.swift */,
+				539A99AA204E717D007E7444 /* New Med Flow */,
 			);
 			path = "Meds Screen";
+			sourceTree = "<group>";
+		};
+		539A99AA204E717D007E7444 /* New Med Flow */ = {
+			isa = PBXGroup;
+			children = (
+				539A99A4204E7112007E7444 /* AddMedViewController.swift */,
+				539A99A6204E7162007E7444 /* DoseAmountTableViewCell.swift */,
+				539A99A8204E7173007E7444 /* BasicNewMedTableViewCell.swift */,
+				539A99AB204E7752007E7444 /* DoseAmountTableViewCellDelegate.swift */,
+			);
+			path = "New Med Flow";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,8 +220,12 @@
 				531B65571FF6B92D00DB9334 /* MirazoMVP.xcdatamodeld in Sources */,
 				531B654F1FF6B92D00DB9334 /* AppDelegate.swift in Sources */,
 				531B656E2003177100DB9334 /* PhysicianContactViewController.swift in Sources */,
+				539A99A9204E7173007E7444 /* BasicNewMedTableViewCell.swift in Sources */,
+				539A99AC204E7752007E7444 /* DoseAmountTableViewCellDelegate.swift in Sources */,
 				531B6568200316BF00DB9334 /* MedicationViewController.swift in Sources */,
 				531B656C2003175C00DB9334 /* ChatbotViewController.swift in Sources */,
+				539A99A7204E7162007E7444 /* DoseAmountTableViewCell.swift in Sources */,
+				539A99A5204E7112007E7444 /* AddMedViewController.swift in Sources */,
 				531B656A200316D700DB9334 /* GraphViewController.swift in Sources */,
 				531B657520031F5800DB9334 /* MedCardView.swift in Sources */,
 				531B65641FFAE99D00DB9334 /* HomeViewController.swift in Sources */,

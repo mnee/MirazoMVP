@@ -30,7 +30,7 @@ class MedicationViewController: UIViewController {
         scrollView.contentSize.height = height
         
         if let navBar = self.navigationController?.navigationBar {
-            navBar.barTintColor = #colorLiteral(red: 1, green: 0.862745098, blue: 0.007843137255, alpha: 1)
+            navBar.removeBorder(with: #colorLiteral(red: 1, green: 0.862745098, blue: 0.007843137255, alpha: 1))
             self.navigationItem.title = "Medications"
             self.navigationItem.hidesBackButton = true
             // TODO: Left align?
@@ -53,7 +53,14 @@ class MedicationViewController: UIViewController {
     
         let imageView = UIImageView(frame: CGRect(x: scrollView.contentSize.width*0.45, y: (margin+cardHeight)*CGFloat(meds.count)+margin*2, width: plusWidth, height: plusWidth))
         imageView.image = UIImage(named: "Plus")
+        let tapToAdd = UITapGestureRecognizer(target: self, action: #selector(addNewMed(_:)))
+        imageView.addGestureRecognizer(tapToAdd)
+        imageView.isUserInteractionEnabled = true
         scrollView.addSubview(imageView)
+    }
+    
+    @objc func addNewMed(_ sender: UITapGestureRecognizer) {
+        performSegue(withIdentifier: "addNewMed", sender: nil)
     }
 
 }
