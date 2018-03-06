@@ -13,11 +13,13 @@ class HomeCardView: UIView {
     var text: String
     var color: UIColor
     var image: UIImage?
+    var tabIndex: Int
     
-    init(_ text: String, _ color: UIColor, _ image: UIImage?, _ frame: CGRect) {
+    init(_ text: String, _ color: UIColor, _ image: UIImage?, _ tabIndex: Int, _ frame: CGRect) {
         self.text = text
         self.color = color
         self.image = image
+        self.tabIndex = tabIndex
         
         super.init(frame: CGRect.zero)
         self.isOpaque = false
@@ -40,7 +42,8 @@ class HomeCardView: UIView {
         // TODO: Set font programatically
         let teaserLabel = UILabel(frame: CGRect(x: margin, y: margin/2, width: bounds.width - margin*2, height: margin*2))
         teaserLabel.text = text
-        teaserLabel.textColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        teaserLabel.textColor = #colorLiteral(red: 0.7278645089, green: 0.7350710882, blue: 0.7350710882, alpha: 1)
+        teaserLabel.font = UIFont(name: "HelveticaNeue-Bold", size: margin)
         self.addSubview(teaserLabel)
         
         let underline = UIBezierPath(rect: CGRect(x: 0, y: margin*2.5, width: bounds.width, height: margin/4))

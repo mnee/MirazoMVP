@@ -29,10 +29,8 @@ class MedCardView: UIView {
         super.init(frame: CGRect.zero)
         self.isOpaque = false
         self.frame = frame
-        
-        setNeedsDisplay() // Potentially not necessary
-        
     }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -46,40 +44,43 @@ class MedCardView: UIView {
         // Medicine title
         let medNameLabel = UILabel(frame: CGRect(x: margin, y: margin/2, width: bounds.width - margin*2, height: sectionHeight*(2/3)))
         medNameLabel.text = medicationName
-        medNameLabel.textColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        medNameLabel.font = UIFont(name: "HelveticaNeue-Bold", size: margin)
+        medNameLabel.textColor = #colorLiteral(red: 0.6396280484, green: 0.6459609993, blue: 0.6459609993, alpha: 1)
         self.addSubview(medNameLabel)
         
         // Yellow line
-        let underline = UIBezierPath(rect: CGRect(x: 0, y: margin/2 + sectionHeight*(7/9), width: bounds.width, height: sectionHeight*(1/9)))
-        #colorLiteral(red: 0.9994240403, green: 0.9237047236, blue: 0, alpha: 0.8530875428).setFill()
+        let underline = UIBezierPath(rect: CGRect(x: 0, y: margin/1.2 + sectionHeight/2, width: bounds.width, height: sectionHeight*(1/9)))
+        #colorLiteral(red: 1, green: 0.9764705882, blue: 0.6784313725, alpha: 1).setFill()
         underline.fill()
         
         // Next dose
-        let nextLabel = UILabel(frame: CGRect(x: margin, y: margin/2 + sectionHeight, width: bounds.width - margin*2, height: sectionHeight/2))
+        let nextLabel = UILabel(frame: CGRect(x: margin, y: margin/2 + sectionHeight/1.3+margin*0.1, width: bounds.width - margin*2, height: sectionHeight/2))
         nextLabel.text = "Next dose"
-        nextLabel.textColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        nextLabel.font = UIFont(name: "HelveticaNeue-Medium", size: margin*0.9)
+        nextLabel.textColor = #colorLiteral(red: 0.7320227859, green: 0.7320227859, blue: 0.7320227859, alpha: 1)
         self.addSubview(nextLabel)
         
-        #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1).setFill()
-        UIRectFill(CGRect(x: margin, y: margin/2 + sectionHeight*1.5, width: sectionHeight/2, height: sectionHeight/2))
+        #colorLiteral(red: 0.8690950428, green: 0.8690950428, blue: 0.8690950428, alpha: 1).setFill()
+        UIRectFill(CGRect(x: margin, y: margin/2 + sectionHeight*1.37, width: sectionHeight/3, height: sectionHeight/3))
         
-        let nextInfoLabel = UILabel(frame: CGRect(x: margin*2 + sectionHeight/2, y: margin/2 + sectionHeight*1.5, width: bounds.width - (margin*2 + sectionHeight/2), height: sectionHeight/2))
+        let nextInfoLabel = UILabel(frame: CGRect(x: margin + sectionHeight/2, y: margin/2 + sectionHeight*1.28, width: bounds.width - (margin*2 + sectionHeight/2), height: sectionHeight/2))
         nextInfoLabel.text = nextDose
-        nextInfoLabel.textColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        nextInfoLabel.textColor = #colorLiteral(red: 0.7320227859, green: 0.7320227859, blue: 0.7320227859, alpha: 1)
         self.addSubview(nextInfoLabel)
         
         // Prev dose
         let prevLabel = UILabel(frame: CGRect(x: margin, y: sectionHeight*2, width: bounds.width - margin*2, height: sectionHeight/2))
         prevLabel.text = "Last dose"
-        prevLabel.textColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        prevLabel.font = UIFont(name: "HelveticaNeue-Medium", size: margin*0.9)
+        prevLabel.textColor = #colorLiteral(red: 0.7320227859, green: 0.7320227859, blue: 0.7320227859, alpha: 1)
         self.addSubview(prevLabel)
         
-        prevTaken ? #colorLiteral(red: 1, green: 0.5, blue: 0.5373643901, alpha: 1).setFill() : #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1).setFill()
-        UIRectFill(CGRect(x: margin, y: margin/2 + sectionHeight*2.5, width: sectionHeight/2, height: sectionHeight/2))
+        prevTaken ? #colorLiteral(red: 0.8270349086, green: 0.9667718081, blue: 0.7583140113, alpha: 1).setFill() : #colorLiteral(red: 1, green: 0.7229301274, blue: 0.7303549193, alpha: 1).setFill()
+        UIRectFill(CGRect(x: margin, y: margin/2 + sectionHeight*2.37, width: sectionHeight/3, height: sectionHeight/3))
         
-        let prevInfoLabel = UILabel(frame: CGRect(x: margin*2 + sectionHeight/2, y: margin/2 + sectionHeight*2.5, width: bounds.width - (margin*2 + sectionHeight/2), height: sectionHeight/2))
+        let prevInfoLabel = UILabel(frame: CGRect(x: margin + sectionHeight/2, y: margin/2 + sectionHeight*2.28, width: bounds.width - (margin*2 + sectionHeight/2), height: sectionHeight/2))
         prevInfoLabel.text = prevDose
-        prevInfoLabel.textColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        prevInfoLabel.textColor = #colorLiteral(red: 0.7320227859, green: 0.7320227859, blue: 0.7320227859, alpha: 1)
         self.addSubview(prevInfoLabel)
         
         
